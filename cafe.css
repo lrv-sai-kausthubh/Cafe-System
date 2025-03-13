@@ -1,0 +1,902 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+
+:root {
+    --orange: #F79F1F;
+    --text-color-1: #444;
+    --text-color-2: #666;
+    --bg-color-1: #fff;
+    --bg-color-2: #eee;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg-color-2);
+}
+
+body.active {
+    --text-color-1: #fff;
+    --text-color-2: #eee;
+    --bg-color-1: #333;
+    --bg-color-2: #222;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .4);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--text-color-1);
+    font-size: 4rem;
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: var(--orange);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #ab6806;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--text-color-1);
+}
+
+.header .logo i {
+    color: var(--orange);
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    margin-left: .5rem;
+    background: var(--bg-color-2);
+    color: var(--text-color-1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    color: #fff;
+    background: var(--orange);
+}
+
+.header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 25rem;
+    transform: scale(0);
+    transform-origin: top right;
+}
+
+.header .navbar.active {
+    transform: scale(1);
+}
+
+.header .navbar a {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    border-radius: .5rem;
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 7rem;
+    background: #fff;
+}
+
+.home .image {
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 100%;
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h3 {
+    color: var(--text-color-1);
+    font-size: 4rem;
+}
+
+.home .content p {
+    color: var(--text-color-2);
+    font-size: 1.7rem;
+    line-height: 1.7;
+    padding: 1rem 0;
+}
+
+.packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.packages .box-container .box {
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.packages .box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.packages .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.packages .box-container .box .image h3 {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    border-radius: .5rem;
+    font-weight: lighter;
+    padding: .5rem 1.5rem;
+}
+
+.packages .box-container .box .image h3 i {
+    color: var(--orange);
+}
+
+.packages .box-container .box .content {
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.packages .box-container .box .content .price {
+    font-weight: 600;
+    color: var(--text-color-1);
+    font-size: 2.5rem;
+}
+
+.packages .box-container .box .content .price span {
+    font-weight: lighter;
+    color: var(--text-color-2);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.packages .box-container .box .content p {
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: var(--text-color-2);
+    line-height: 1.7;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact form textarea,
+.contact form .inputBox input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--text-color-1);
+    margin: .7rem 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    text-transform: none;
+    border-radius: .5rem;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+.footer {
+    background: var(--bg-color-1);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--text-color-1);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--text-color-2);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: var(--orange);
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    font-size: 2rem;
+    text-align: center;
+    border-top: .1rem solid var(--text-color-2);
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    color: var(--text-color-2);
+}
+
+.footer .credit span {
+    color: var(--orange);
+}
+
+/* Example: Limit carousel image height and ensure they scale nicely */
+
+/* .snacks-slider .box .image img,
+.drinks-slider .box .image img,
+.desserts-slider .box .image img {
+  width: 100%;
+  height: auto;        
+  max-height: 200px;   
+  object-fit: cover;   
+}
+
+
+.snacks-slider .box .image,
+.drinks-slider .box .image,
+.desserts-slider .box .image {
+  height: auto;        
+  padding: 1rem;       
+} */
+ /* did some stuff here  */
+
+/* Enforce a consistent image container size for all .box items */
+.box .image {
+    width: 100%;
+    height: 200px; /* Fixed height so images align uniformly */
+    overflow: hidden;
+  }
+  
+  /* Make images fill the container while maintaining aspect ratio */
+  .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Optionally, reduce the height on mobile screens */
+  @media (max-width: 768px) {
+    .box .image {
+      height: 160px; /* Adjust as needed for mobile layout */
+    }
+  }
+  
+/* Make the main price bigger and bold */
+.price {
+    font-size: 2.2rem;     /* Increase as needed (e.g., 2.2rem, 2.5rem, etc.) */
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  /* Strikethrough the old price, make it slightly smaller or a different color */
+  .price span {
+    font-size: 1.6rem;     /* Slightly smaller or the same size */
+    color: #999;           /* Subtle color for the old price */
+    text-decoration: line-through;
+    margin-left: 1rem;     /* Space between the two prices */
+  }
+
+  /* Card container */
+.box {
+    background: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Subtle lift on hover */
+  .box:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image section with an overlay heading */
+  .box .image {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust height if needed */
+    overflow: hidden;
+  }
+  
+  /* Make images cover the container */
+  .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop if image ratio doesn't match */
+  }
+  
+  /* Title + small icon overlay at the bottom-left of the image */
+  .box .image h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space between icon and text */
+  }
+  
+  /* If you want to change the icon color or size inside the heading */
+  .box .image h3 i {
+    font-size: 1.6rem;    /* Adjust icon size */
+    color: #ff9800;       /* Contrasting color, or keep #fff if you prefer */
+  }
+  
+  /* Content area for price, description, button */
+  .box .content {
+    padding: 1.5rem;
+  }
+  
+  /* Price styling (main price + old price) */
+  .box .content .price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Struck-through old price */
+  .box .content .price span {
+    font-size: 1.4rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+  }
+  
+  /* Short description */
+  .box .content p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* “Add to Cart” button */
+  .box .btn.add-to-cart {
+    background: #ff9800;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+  
+  .box .btn.add-to-cart:hover {
+    background: #e68a00;
+  }
+  
+
+  /* Enforce a consistent image container size */
+.box .image {
+    width: 100%;
+    height: 200px; /* Fixed height so images align uniformly */
+    overflow: hidden;
+  }
+  
+  /* Make images fill the container while maintaining aspect ratio */
+  .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  /* Optionally, make images a bit smaller on mobile */
+  @media (max-width: 768px) {
+    .box .image {
+      height: 160px; /* Adjust as needed for mobile layout */
+    }
+  }
+  
+
+
+/* add to cart part */
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.add-to-cart {
+    background: var(--orange) !important;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--orange);
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 1.2rem;
+}
+
+
+
+.cart-sidebar {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    transition: right 0.3s ease;
+    z-index: 2000;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-sidebar .close-cart {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    float: right;
+}
+
+.cart-sidebar h2 {
+    margin: 2rem 0 1rem;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.cart-item-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.cart-total {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Add a small circle badge on cart icon */
+#cart-btn {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--orange);
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    /* fixed width */
+    height: 20px;
+    /* fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* add to cart part ends */
+
+
+/* media queries  */
+
+/* for phones cart media part */
+@media (max-width: 768px) {
+    .cart-sidebar {
+        width: 90%;
+        /* Increase width for better visibility */
+        right: -100%;
+        height: 100vh;
+        padding: 2rem;
+        /* More padding for a cleaner look */
+    }
+
+    .cart-items {
+        max-height: 60vh;
+        /* Increase height for better scrolling */
+        overflow-y: auto;
+    }
+
+    .cart-item {
+        flex-direction: row;
+        /* Keep it aligned properly */
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        /* Add spacing between items */
+    }
+
+    .cart-item img {
+        width: 70px;
+        /* Increase image size */
+        margin-right: 1rem;
+    }
+
+    .cart-item-info h4 {
+        font-size: 1.4rem;
+        /* Increase text size for better readability */
+    }
+
+    .cart-total {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    /* Increase padding between buttons */
+    .cart-item button {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Cart Title */
+.cart-sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 0.5rem;
+}
+
+/* Cart Items */
+.cart-items {
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+/* Individual Cart Item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    /* Light separator */
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    /* Rounded corners */
+    margin-right: 1rem;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+}
+
+/* Quantity & Remove Button */
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-controls button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cart-controls button:hover {
+    background: #e68900;
+}
+
+/* Cart Total */
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #e68900;
+}
+
+
+
+/* For laptops and extra-large devices */
+@media (min-width: 1024px) {
+    .cart-sidebar {
+        width: 400px;
+        /* Increase width for better visibility */
+        padding: 2rem;
+        /* Add more padding */
+    }
+
+    .cart-items {
+        max-height: 70vh;
+        /* More height for better scrolling */
+        overflow-y: auto;
+    }
+
+    .cart-item {
+        padding-bottom: 1.5rem;
+        /* Add more spacing between items */
+    }
+
+    .cart-item img {
+        width: 80px;
+        /* Increase image size */
+        margin-right: 1.5rem;
+    }
+
+    .cart-item-info h4 {
+        font-size: 1.5rem;
+        /* Increase text size */
+    }
+
+    .cart-total {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1.5rem;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Increase padding between buttons */
+    .cart-item button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .header .navbar {
+        right: 2rem;
+    }
+
+    .header .login-form {
+        right: 2rem;
+    }
+
+    #search-btn {
+        display: inline-block;
+    }
+
+    .header .search-form {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        background: var(--bg-color-1);
+        border-radius: .5rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .search-form.active {
+        transform: scale(1);
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .inputBox input {
+        width: 100%;
+    }
+
+}

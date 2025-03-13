@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- custom css file cdn link  -->
+    <link rel="stylesheet" href="cafe.css" />
+
+    <title>Food Zone</title>
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+        <a href="#" class="logo">
+            <i class="fas fa-utensils"></i> EZ FOOD
+        </a>
+        <div class="icons">
+            <!-- Added cart count span inside the cart icon -->
+            <div class="fas fa-shopping-cart" id="cart-btn">
+                <span class="cart-count">0</span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#packages">Menu</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- header section ends -->
+
+    <!-- Cart Sidebar (Newly added) -->
+    <div class="cart-sidebar">
+        <button class="close-cart">×</button>
+        <h2>Your Cart</h2>
+        <div class="cart-items">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-total">
+            Total: <span>0</span>
+        </div>
+        <button class="checkout-btn btn">Checkout</button>
+    </div>
+
+    <!-- home section starts  -->
+    <section class="home" id="home">
+        <div class="image" data-aos="fade-down">
+            <img src="freepik__background__97907.png" alt="" />
+        </div>
+        <div class="content" data-aos="fade-up">
+            <h3>Simplifying Food Order </h3>
+            <p>Tired of waiting in line to get your food?</p>
+            <p>Place your order here & simplify your experience</p>
+            <a href="#packages" class="btn">Explore Now</a>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+    <section class="packages" id="packages">
+        <h1 class="heading"> our <span>Menu</span> </h1>
+
+        <!-- Snacks Carousel -->
+        <div class="menu-category">
+            <h2>Snacks / Food</h2>
+            <div class="swiper snacks-slider">
+                <div class="swiper-wrapper">
+                    <!-- Each slide -->
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="samosa.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Samosa</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="kachori.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Kachori</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="veg biryani.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Veg biryani</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹90 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="layzzz.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Lays</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More slides... -->
+                </div>
+
+                <!-- Navigation & Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+                <!-- Drinks Carousel -->
+        <div class="menu-category">
+            <h2>Drinks</h2>
+            <div class="swiper drinks-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slides for drinks... -->
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="also coke.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Coca cola</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="sprite can.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Sprite</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="thumbs up can.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Thumbs up</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="monster.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Monster</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Correctly closing swiper-wrapper -->
+
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+        <!-- Desserts Carousel -->
+        <div class="menu-category">
+            <h2>Desserts</h2>
+            <div class="swiper desserts-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slides for desserts... -->
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="choclate brownie.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Choclate brownie</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="also cake.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Cake</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="clc.jpg" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Chocolava cake</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <div class="image">
+                                <img src="gulab jamun.png" alt="" />
+                                <h3><i class="fas fa-utensils"></i> Gulab Jamun</h3>
+                            </div>
+                            <div class="content">
+                                <div class="price">₹25 <span>₹30</span></div>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                <button class="btn add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- contact section starts  -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <form action="" data-aos="zoom">
+            <div class="inputBox">
+                <input type="text" placeholder="name" data-aos="fade-up" />
+                <input type="email" placeholder="email" data-aos="fade-up" />
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number" data-aos="fade-up" />
+                <input type="text" placeholder="subject" data-aos="fade-up" />
+            </div>
+            <textarea name="" placeholder="your message" cols="30" rows="10" data-aos="fade-up"></textarea>
+            <input type="submit" value="send message" class="btn" />
+        </form>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer section starts  -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box" data-aos="fade-up">
+                <h3>our branches</h3>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> india</a>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="#packages"><i class="fas fa-chevron-right"></i> Menu</a>
+                <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#"><i class="fas fa-phone"></i> +111-222-3333</a>
+                <a href="#"><i class="fas fa-envelope"></i> 1234@gmail.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Hyd, india - 1234567</a>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <h3>follow us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+            </div>
+        </div>
+        <div class="credit"> created by <span>Lrv Sai Kausthubh</span> | all rights reserved </div>
+    </section>
+    <!-- footer section ends -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- custom js file link  -->
+    <script src="cafe.js"></script>
+
+</body>
+
+</html>
